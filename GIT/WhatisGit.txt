@@ -1,1 +1,1 @@
-Git is a version control manager
+Git is a version control manager tool, which helps us to version code changes.
