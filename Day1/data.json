@@ -1,0 +1,11 @@
+{
+  "name": "Vishnu",
+  "age": 28,
+  "languages": ["Tamil", "English", "Kannada"],
+  "address": {
+    "line1": "No1. Pillayar kovil theru",
+    "line2": "Thottipalayam",
+    "city": "Coimbatore",
+    "state": "Tamilnadu"
+  }
+}
