@@ -1,3 +1,7 @@
+/**
+ * Basic syntax for creating class includes Abstraction, Encapsulation
+ * Base class
+ */
 class Food {
   constructor(name, price, ingredients, foodType, image, quantity) {
     this.name = name;
@@ -14,6 +18,10 @@ class Food {
 
   getFoodType() {
     return this.foodType;
+  }
+
+  getQuantity() {
+    return this.quantity;
   }
 }
 
@@ -34,5 +42,36 @@ const dosa = new Food(
   3
 );
 
-console.log(idli.getItemPrice(), dosa.getItemPrice());
+console.log(idli);
 console.log(idli.getFoodType(), dosa.getFoodType());
+console.log(idli.getQuantity(), dosa.getQuantity());
+
+/**
+ * Inheritance
+ * Derived Class
+ */
+class SuperFood extends Food {
+  constructor(
+    name,
+    price,
+    ingredients,
+    foodType,
+    image,
+    quantity,
+    specialIngredient = []
+  ) {
+    super(name, price, ingredients, foodType, image, quantity);
+    this.specialIngredient = specialIngredient;
+  }
+}
+
+const AmbaniBreakfast = new SuperFood(
+  "Idli",
+  30,
+  ["Rice", "Salt", "Fenugreek", "Gramdall"],
+  "Veg",
+  "https://b.zmtcdn.com/data/pictures/chains/2/52002/02b62f353f680fead0f55b28e22619ef.jpg?output-format=webp",
+  2,
+  ["x", "y"]
+);
+console.log(AmbaniBreakfast);
