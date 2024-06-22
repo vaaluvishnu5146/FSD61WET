@@ -75,3 +75,13 @@ const AmbaniBreakfast = new SuperFood(
   ["x", "y"]
 );
 console.log(AmbaniBreakfast);
+
+class UltimatumFood extends SuperFood {
+  constructor(aceIngredient = "None") {
+    super();
+    this.aceIngredient = aceIngredient;
+  }
+}
+
+const Ace = new UltimatumFood();
+console.log(Ace);
