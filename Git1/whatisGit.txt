@@ -1,0 +1,7 @@
+**Git**:
+
+Git is a version control system (VCS) that allows you to track changes in your files over time.
+It was created by Linus Torvalds, the same person who created Linux. 
+Git is a distributed version control system, which means that every developer working on a project 
+has a complete copy of the project's history on their local machine. 
+This enables collaboration without a centralized server.

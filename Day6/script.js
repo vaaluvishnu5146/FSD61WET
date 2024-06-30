@@ -87,7 +87,7 @@ scores.forEach((element) => {
 console.log(totalScore);
 
 // Reduce
-var scores = [1, 3, 4, 6, 2, 0];
+var scores = ["1", "3", "4", "6", "2", "0"];
 
 function callback(carry, nextElement) {
   console.log(carry, nextElement);
@@ -105,3 +105,35 @@ console.log(Array.prototype);
 
 var data = ["My fn", "Prototype"];
 data.vishnu();
+
+// indexOf
+var scores = [1, 3, 4, 6, 2, 0];
+
+console.log(scores.indexOf(4)); // 2
+console.log(scores.indexOf(10)); // -1
+
+// find index of element using for loop
+var scores = [1, 3, 4, 6, 2, 0];
+
+function indexOf(arr = [], elem = 0) {
+  var res = -1;
+  for (var index = 0; index < arr.length; index++) {
+    console.log(index);
+    if (arr[index] === elem) {
+      res = index;
+      return res;
+    }
+  }
+  return res;
+}
+
+console.log(indexOf(scores, 4));
+
+// Find the first element in the array
+var scores = [0, 3, 0, 1, 3, 2];
+
+function findElement(element, index) {
+  return element === 1;
+}
+
+console.log(scores.find(findElement));
