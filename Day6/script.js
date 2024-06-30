@@ -29,3 +29,79 @@ function callback(element, index, self) {
 }
 var output = scores.map(callback); // [2, 6, 8, 12, 4, 0]
 console.log(output);
+
+// Filter
+// for loop
+var input = ["💙", "🐙", "🐙", "🐳", "🐳"];
+var output = [];
+// I wanted only "🐙", "🐳"
+for (var z = 0; z < input.length; z++) {
+  if (input[z] === "🐙" || input[z] === "🐳") {
+    output.push(input[z]);
+  }
+}
+console.log(input, output);
+
+// using forEach filter array
+var input = ["💙", "🐙", "🐙", "🐳", "🐳"];
+var output = [];
+
+input.forEach((element) => {
+  if (element !== "💙") {
+    output.push(element);
+  }
+});
+
+console.log(input, output);
+
+// filter() fn to filter out "💙"
+var input = ["💙", "🐙", "🐙", "🐳", "🐳"];
+
+function filterElements(element, index, array) {
+  return element === "💙";
+}
+
+var output = input.filter(filterElements);
+console.log(output);
+
+// Reduce
+
+// Calculate total score using for loop
+var scores = [1, 3, 4, 6, 2, 0];
+var totalScore = 0;
+
+for (var a = 0; a < scores.length; a++) {
+  totalScore += scores[a];
+}
+
+console.log(totalScore);
+
+// Calculate total score using for loop
+var scores = [1, 3, 4, 6, 2, 0];
+var totalScore = 0;
+
+scores.forEach((element) => {
+  totalScore += element;
+});
+
+console.log(totalScore);
+
+// Reduce
+var scores = [1, 3, 4, 6, 2, 0];
+
+function callback(carry, nextElement) {
+  console.log(carry, nextElement);
+  return carry + nextElement;
+}
+
+var output = scores.reduce(callback);
+console.log("Answer", output);
+
+Array.prototype.vishnu = function () {
+  console.log(this);
+};
+
+console.log(Array.prototype);
+
+var data = ["My fn", "Prototype"];
+data.vishnu();
