@@ -1,0 +1,44 @@
+/* CLASS SELECTOR */
+.btn {
+  width: 100px;
+  height: 30px;
+  border: 0px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+/* ELEMENT SELECTOR */
+button {
+  width: 100px;
+  height: 30px;
+  border: 0px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.green-btn {
+  background-color: lightseagreen;
+}
+
+.coral-btn {
+  background-color: lightcoral;
+}
+
+/* ID SELECTOR */
+#uniqueButton {
+  border: 1px dotted yellow;
+}
+
+p {
+  color: black;
+}
+
+.para {
+  color: red;
+}
+
+#para {
+  color: maroon !important;
+}
