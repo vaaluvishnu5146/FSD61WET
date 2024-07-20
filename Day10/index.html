@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 10</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      html {
+        height: 100vh;
+      }
+
+      body {
+        background: red;
+      }
+
+      .square {
+        width: 100px;
+        height: 100px;
+        background-color: #f9d74d;
+        -webkit-box-shadow: inset 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: inset 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: inset 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 480px) {
+        body {
+          background: linear-gradient(to top, #ffb65c, #f9d74d);
+        }
+
+        .heading {
+          font-size: 12px;
+        }
+      }
+
+      @media screen and (min-width: 1080px) and (max-width: 1280px) {
+        body {
+          background: linear-gradient(to top, #90ee90, #f9d74d);
+        }
+        .heading {
+          font-size: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <p class="heading">Hey im a text</p>
+    <div class="square">
+      <div style="height: inherit; background-color: inherit">Content</div>
+    </div>
+  </body>
+</html>
