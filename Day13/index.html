@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Utils</title>
+    <style>
+        .page-section {
+            width: 100%;
+            height: 600px;
+        }
+
+        .one {
+            background: green;
+        }
+
+        .two {
+            background: red;
+        }
+
+        .three {
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+    <section class="page-section one">
+        <button onclick="window.scrollBy(0, 600)">Next</button>
+        <button onclick="window.location.reload()">Refresh</button>
+        <button onclick="stopInterval()">Stop Interval</button>
+    </section>
+    <section class="page-section two">
+        <button onclick="window.scrollBy(0, 2 * 600)">Next</button>
+    </section>
+    <section class="page-section three"></section>
+    <button onclick="alert('Button clicked')">Alert</button>
+    <script>
+        /**
+         * Browser API'S - Browser Object Model (BOM)
+         * Popups and dialogs
+         **/
+
+        // Prompt
+        // const message = window.prompt("I am a prompt")
+        // console.log(message)
+        
+        // Alert
+        // window.alert("Im a alert")
+        
+        // confirm
+        // const res = window.confirm("Are you sure to logout?")
+        // console.log(res)
+
+        // Print API - Printer
+        // window.print()
+
+        /**
+         * Window Dimensions and scrolling functionality
+         * 1. Getting width and height of content area
+        */
+       console.log("InnerWidth of window", window.innerWidth)
+       console.log("InnerHeight of window", window.innerHeight)
+
+       /**
+        * Getting width and height of browser area
+        */
+       console.log("outerWidth", window.outerWidth)
+       console.log("outerHeight", window.outerHeight)
+
+       /**
+        * scrollBy and scrollTo
+        **/
+       window.scrollTo(0, 500)
+       window.scrollBy(0, 900)
+      
+       /**
+        * Location
+       */
+       // window.location.reload()
+       // window.location.replace()
+
+       /**
+        * Browser storage
+        * 1. localStorage
+        * 2. sessionStorage
+        * 3. cookies
+       */
+        // window.localStorage.setItem("name", "Vishnu")
+        // window.localStorage.setItem("age", "20")
+        // window.sessionStorage.setItem("name", "Vardhan")
+        // console.log(window.localStorage.getItem("name"))
+
+        /**
+         * Browser Timer API
+        */
+       // setTimeout
+       function greet() {
+        console.log('Hello')
+       }
+       const bdayTimer = window.setTimeout(() => {
+        greet()
+       }, 5000);
+       window.clearTimeout(bdayTimer)
+
+       // setInterval
+       const intervalId = window.setInterval(() => {
+        console.log("Hello")
+       }, 1000)
+       console.log(intervalId)
+       function stopInterval() {
+        window.clearInterval(intervalId)
+       }
+</script>
+<script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
