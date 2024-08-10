@@ -30,7 +30,6 @@
 
 // a(10, b);
 
-
 // const a = (b) => {
 //     b(c)
 // }
@@ -49,31 +48,31 @@
 
 // a(b)
 
-
 // 1. Note readable - Not possible
 // 2. Maintainable code - Not possible
 // 3. Code debuggable - Not possible
 const Timer = () => {
-    console.log(10)
+  console.log(10);
+  setTimeout(() => {
+    console.log(9);
     setTimeout(() => {
-        console.log(9);
-        setTimeout(() => {
-            console.log(8);
-            setTimeout(() => {
-                console.log(7);
-            }, 1000)
-        }, 1000)
-    }, 1000)
+      console.log(8);
+      setTimeout(() => {
+        console.log(7);
+      }, 1000);
+    }, 1000);
+  }, 1000);
+};
+
+Timer();
+
+function eat() {
+  console.log("Eat Food");
 }
 
-Timer()
+function cook(work) {
+  console.log("Idli Cooked");
+  work();
+}
 
-
-
-
-
-
-
-
-
-
+cook(eat);
