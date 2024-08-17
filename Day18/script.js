@@ -12,7 +12,7 @@ saveButton.addEventListener('click', () => {
 })
 
 function fetchAllDoos() {
-    fetch("http://localhost:3000")
+    fetch("https://doodoo-aabz.onrender.com")
     .then((response) => {
         return response.json()
     }).then((result) => {
@@ -24,10 +24,8 @@ function fetchAllDoos() {
     })
 }
 
-fetchAllDoos();
-
 function saveATodo(value = "") {
-    fetch("http://localhost:3000/create", {
+    fetch("https://doodoo-aabz.onrender.com/create", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -43,8 +41,6 @@ function saveATodo(value = "") {
         console.log(err)
     })
 }
-
-
 
 function refreshList(datas = []) {
     const nodes = [];
@@ -76,3 +72,5 @@ function createListItem(data = {}) {
     `
     return node;
 }
+
+fetchAllDoos();
