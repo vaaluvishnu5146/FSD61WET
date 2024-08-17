@@ -1,0 +1,14 @@
+.app-container {
+    width: 100%;
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.input-custom {
+    height: 48px;
+}
+
+.btn-auto {
+    width: 100%;
+}
